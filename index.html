@@ -32,13 +32,25 @@
       🚀 BetPuan’a Hemen Bağlan
     </a>
   </section>
-
-<!-- Image Trio -->
-<section class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto my-12 px-6">
+<!-- Image Trio (Randomized) -->
+<section class="random-trio grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto my-12 px-6">
   <img src="https://raw.githubusercontent.com/betseogalaxi/m/main/000013-ios.jpg" alt="iOS Bahis Uygulaması" class="rounded-lg shadow-lg" rel="nofollow">
   <img src="https://raw.githubusercontent.com/betseogalaxi/m/main/000014-free-spin.jpg" alt="Ücretsiz Spin Bonusu" class="rounded-lg shadow-lg" rel="nofollow">
   <img src="https://raw.githubusercontent.com/betseogalaxi/m/main/000015-flamming-hot-oyun.jpg" alt="Flamming Hot Oyun" class="rounded-lg shadow-lg" rel="nofollow">
 </section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    const section = document.querySelector(".random-trio");
+    if (!section) return;
+
+    const images = Array.from(section.querySelectorAll("img"));
+    for (let i = images.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      section.insertBefore(images[j], images[i]);
+    }
+  });
+</script>
 
 <!-- SEO Text Block -->
 <section class="bg-[#B8EE72] py-10 px-6 text-center text-black">
